@@ -147,6 +147,19 @@
 				"type": "event"
 			},
 			{
+				"inputs": [],
+				"name": "MAX_SUPPLY",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -214,8 +227,14 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "comprarToken",
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "changeOwner",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -234,6 +253,24 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "mint",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "name",
 				"outputs": [
@@ -241,6 +278,19 @@
 						"internalType": "string",
 						"name": "",
 						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -276,12 +326,12 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "",
+						"name": "to",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "amount",
 						"type": "uint256"
 					}
 				],
@@ -293,24 +343,24 @@
 						"type": "bool"
 					}
 				],
-				"stateMutability": "pure",
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "",
+						"name": "from",
 						"type": "address"
 					},
 					{
 						"internalType": "address",
-						"name": "",
+						"name": "to",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "amount",
 						"type": "uint256"
 					}
 				],
@@ -322,7 +372,7 @@
 						"type": "bool"
 					}
 				],
-				"stateMutability": "pure",
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -478,11 +528,11 @@
 			]
 		},
 		"contracts/tokenespera.sol": {
-			"keccak256": "0x45052ed09457056c3bcfa8e4a52444b1ca73b53102902fc7fa117331d81986b0",
+			"keccak256": "0x8f60d3016005c25589ca713e8db687baf1d8e010d6649d1d842bc94806ce2f30",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://685356133d356bb041925f2a8755245dd65bb78add6c9b08e9f2c589e1e48e80",
-				"dweb:/ipfs/QmQJSJk8upSrYgF6Z1eqjJW1yw7F6zYuwW2fGHBbqeheCZ"
+				"bzz-raw://edb26a74814bcd2b8030bc6c3ddac89c19e9d9fe75a03e11c4b7ef6ffa70bc3d",
+				"dweb:/ipfs/Qmbb4fspFTHpp5fkQsd7k6gxFJAeueCbhegAJzFYhvUwPz"
 			]
 		}
 	},

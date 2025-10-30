@@ -17,6 +17,32 @@
 				"type": "constructor"
 			},
 			{
+				"inputs": [],
+				"name": "inscribirse",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "inscritos",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -154,19 +180,19 @@
 			]
 		},
 		"contracts/listaespera.sol": {
-			"keccak256": "0xbe720fe234ff11f6acaed85681ef8d30fe58f9d27438970356ff8e5080b687e8",
+			"keccak256": "0x4562dccab5679361829bd63a3333cfae1b2c9023983395ea0c2997972c84ac8a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1895cebdac01cb0903353d6db1c66ed99d8b828f8d904ce88f76b61efa6e64ef",
-				"dweb:/ipfs/QmS1MmFss7WFZS5rHPoyaXhfeJi2QKWokzughMN9muFccw"
+				"bzz-raw://4993deab9b89debf8bf758a7dbc21ba30a1f16b63d02adee5625de21878b3d19",
+				"dweb:/ipfs/QmPVXhZVmjBLCBaZPQQj5SDYjTpQrndvKgpFKCW4c4MDiE"
 			]
 		},
 		"contracts/tokenespera.sol": {
-			"keccak256": "0x45052ed09457056c3bcfa8e4a52444b1ca73b53102902fc7fa117331d81986b0",
+			"keccak256": "0xabfb3ff5d6915249caf83829a88f764d9b59d414866b6ddbefe2c9abc45e83df",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://685356133d356bb041925f2a8755245dd65bb78add6c9b08e9f2c589e1e48e80",
-				"dweb:/ipfs/QmQJSJk8upSrYgF6Z1eqjJW1yw7F6zYuwW2fGHBbqeheCZ"
+				"bzz-raw://5f5919acb2cc26f73422d259938e0631b1700887fc666103bbdd83775da8f47d",
+				"dweb:/ipfs/QmS7gMtvdXyAW8m18mwqmMaVB3oP7iLpNNmnf7KLUx7bDG"
 			]
 		}
 	},

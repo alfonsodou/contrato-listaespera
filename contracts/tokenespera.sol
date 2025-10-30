@@ -4,22 +4,49 @@ pragma solidity ^0.8.10;
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract TokenEspera is ERC20 {
-    constructor() ERC20("Token Espera", "ESP") {
+    address public owner;
+    uint256 public constant MAX_SUPPLY = 10000 * 10**18;
 
+    constructor() ERC20("Token Espera", "ESP") {
+        owner = msg.sender;
     }
 
-    function comprarToken() external {
+    function changeOwner(address newOwner) external {
+        require(msg.sender == owner, "Tienes que ser el propietario");
+        require(newOwner != address(0), "Direccion invalida");
+
+        owner = newOwner;
+    }
+
+ /*   function comprarToken() external {
         uint256 numeroTokens = balanceOf(msg.sender) + 1;
 
         _mint(msg.sender, numeroTokens * 10**18);
     }
 
-    function transfer(address, uint256) public pure override returns (bool) {
-        revert("Usa transferForMember");
+    function transferForMember(address from, address to, uint256 amount) external returns (bool) {
+        require(balanceOf(from) >= amount, "Saldo insuficiente");
+
+        _transfer(from, to, amount);
+
+        return true;
+    }*/
+
+    function transfer(address to, uint256 amount) public override returns (bool) {
+        require(msg.sender == owner, "Solo el propietario puede transferir");
+        return super.transfer(to, amount);
     }
 
-     function transferFrom(address, address, uint256) public pure override returns (bool) {
-        revert("Usa transferForMember");
+     function transferFrom(address from, address to, uint256 amount) public override returns (bool) {
+        require(msg.sender == owner, "Solo el propietario puede transferir");
+        return super.transferFrom(from, to, amount);
+    }
+
+    function mint(address to,  uint256 amount) external {
+        require(msg.sender == owner, "Solo el propietario puede mintear");
+        require(totalSupply() + amount <= MAX_SUPPLY, "No se puede superar el maximo de suministro");
+
+        _mint(to, amount);
     }
    
 }
