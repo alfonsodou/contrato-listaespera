@@ -17,6 +17,30 @@
 				"type": "constructor"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_usuario",
+						"type": "address"
+					}
+				],
+				"name": "numeroEnLista",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "owner",
 				"outputs": [
@@ -37,6 +61,25 @@
 						"internalType": "contract TokenEspera",
 						"name": "",
 						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_usuario",
+						"type": "address"
+					}
+				],
+				"name": "yaEstaInscrito",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -111,11 +154,11 @@
 			]
 		},
 		"contracts/listaespera.sol": {
-			"keccak256": "0x21797eba97cf3978ac7fe96410a4a5b554d0af7fd067a7d33722d7662113b2f8",
+			"keccak256": "0xbe720fe234ff11f6acaed85681ef8d30fe58f9d27438970356ff8e5080b687e8",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d6122bde2993b8dae9d7326e34b5bf0141fd4482e6fb84c0224908fcfc2d40d3",
-				"dweb:/ipfs/QmewuppwHm1uvLdDRGi1eGfX469pfquXgHjr7gVrDWcxuX"
+				"bzz-raw://1895cebdac01cb0903353d6db1c66ed99d8b828f8d904ce88f76b61efa6e64ef",
+				"dweb:/ipfs/QmS1MmFss7WFZS5rHPoyaXhfeJi2QKWokzughMN9muFccw"
 			]
 		},
 		"contracts/tokenespera.sol": {
