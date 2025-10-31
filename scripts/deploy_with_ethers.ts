@@ -6,8 +6,12 @@ import { deploy } from './ethers-lib'
 
 (async () => {
   try {
-    const result = await deploy('Storage', [])
-    console.log(`address: ${result.address}`)
+    const tokenEspera = await deploy('TokenEspera', [])
+    console.log(`address: ${tokenEspera.address}`)
+
+    const listaEspera = await deploy('ListaEspera', [tokenEspera.address])
+    console.log(`address: ${listaEspera.address}`)
+    
   } catch (e) {
     console.log(e.message)
   }

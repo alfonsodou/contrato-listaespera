@@ -19,6 +19,8 @@ contract ListaEspera {
 
 
         inscritos.push(msg.sender);
+
+        token.transfer(owner, 1);
     }
 
     function yaEstaInscrito(address _usuario) public view returns (bool) {
@@ -47,6 +49,20 @@ contract ListaEspera {
         }
 
         return (encontrado, indice);
+    }
+
+   function comprarToken() external {
+        uint256 numeroTokens = token.balanceOf(msg.sender) + 1;
+
+        token.mint(msg.sender, numeroTokens * 10**18);
+    }
+
+    function transferForMember(address from, address to, uint256 amount) external returns (bool) {
+        require(token.balanceOf(from) >= amount, "Saldo insuficiente");
+
+        token.transferFrom(from, to, amount);
+
+        return true;
     }
 
     // Modificador para prevenir ataques de reentrada

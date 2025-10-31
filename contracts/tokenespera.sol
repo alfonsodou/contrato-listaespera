@@ -18,20 +18,6 @@ contract TokenEspera is ERC20 {
         owner = newOwner;
     }
 
- /*   function comprarToken() external {
-        uint256 numeroTokens = balanceOf(msg.sender) + 1;
-
-        _mint(msg.sender, numeroTokens * 10**18);
-    }
-
-    function transferForMember(address from, address to, uint256 amount) external returns (bool) {
-        require(balanceOf(from) >= amount, "Saldo insuficiente");
-
-        _transfer(from, to, amount);
-
-        return true;
-    }*/
-
     function transfer(address to, uint256 amount) public override returns (bool) {
         require(msg.sender == owner, "Solo el propietario puede transferir");
         return super.transfer(to, amount);

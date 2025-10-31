@@ -18,6 +18,13 @@
 			},
 			{
 				"inputs": [],
+				"name": "comprarToken",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "inscribirse",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -90,6 +97,35 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "transferForMember",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -180,19 +216,19 @@
 			]
 		},
 		"contracts/listaespera.sol": {
-			"keccak256": "0x4562dccab5679361829bd63a3333cfae1b2c9023983395ea0c2997972c84ac8a",
+			"keccak256": "0x7423a5172ebf1244a32c30cf3e3daf0825f5a3293a96b80f8930b468879861a6",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://4993deab9b89debf8bf758a7dbc21ba30a1f16b63d02adee5625de21878b3d19",
-				"dweb:/ipfs/QmPVXhZVmjBLCBaZPQQj5SDYjTpQrndvKgpFKCW4c4MDiE"
+				"bzz-raw://f4c8fb687e5c82c1304ab4e7993e617022c4a1a9caf7253dc4a6dbd299cbff35",
+				"dweb:/ipfs/QmP4SSawZs2AtMv6PwdPhWLG2Qxwk74o7T1q42R5nJ5ce7"
 			]
 		},
 		"contracts/tokenespera.sol": {
-			"keccak256": "0xabfb3ff5d6915249caf83829a88f764d9b59d414866b6ddbefe2c9abc45e83df",
+			"keccak256": "0xd57d644f6389d9c358632a7b520e0207729160ef7916243ecd597d7b4c86c9c3",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5f5919acb2cc26f73422d259938e0631b1700887fc666103bbdd83775da8f47d",
-				"dweb:/ipfs/QmS7gMtvdXyAW8m18mwqmMaVB3oP7iLpNNmnf7KLUx7bDG"
+				"bzz-raw://807c7c92ea780cedf601bc59b0dffe67ae05b7b75f3c2853fff2c2e29d186e62",
+				"dweb:/ipfs/QmZAopMdE1YqfC1SrfbSXh5Jd7dTNzd7UtrTcBDQWFa4vV"
 			]
 		}
 	},
