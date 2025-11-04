@@ -11,6 +11,8 @@ import { deploy } from './ethers-lib'
 
     const listaEspera = await deploy('ListaEspera', [tokenEspera.address])
     console.log(`address: ${listaEspera.address}`)
+
+    await tokenEspera.changeOwner(listaEspera.address);
     
   } catch (e) {
     console.log(e.message)

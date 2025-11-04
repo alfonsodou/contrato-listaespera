@@ -52,9 +52,9 @@ contract ListaEspera {
     }
 
    function comprarToken() external {
-        uint256 numeroTokens = token.balanceOf(msg.sender) + 1;
+        uint256 numeroTokens = token.balanceOf(msg.sender) + (10**18);
 
-        token.mint(msg.sender, numeroTokens * 10**18);
+        token.mint(msg.sender, numeroTokens);
     }
 
     function transferForMember(address from, address to, uint256 amount) external returns (bool) {
