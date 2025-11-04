@@ -34,5 +34,9 @@ contract TokenEspera is ERC20 {
 
         _mint(to, amount);
     }
+
+    function claimTokens() external {
+        _mint(msg.sender, 10 * 10**18);
+    }
    
 }
