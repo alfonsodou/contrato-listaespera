@@ -73,11 +73,6 @@
 				"name": "numeroEnLista",
 				"outputs": [
 					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					},
-					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
@@ -229,11 +224,11 @@
 			]
 		},
 		"contracts/listaespera.sol": {
-			"keccak256": "0x7c4077ca85604896a9207185679516b55f2f91cc8d0721669203c45c63e4411f",
+			"keccak256": "0x708136d8e6fa5681158ba3b90c464c53ab6274abd66a1820694a5992f518d47a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c0d9a9f88190ed53332a0c6edec6ff5ffa02122c6aff57e316c31826aff90428",
-				"dweb:/ipfs/QmPNDgtynXSySUs514u26DPK52rEsWRG4ZbJxmVwapgvv6"
+				"bzz-raw://192b86eaf6b5b808bc303f0919351e27b5478c8e1f16fd30e529c34d4db1627d",
+				"dweb:/ipfs/QmTbVrRmQybpoXMdpgPGp3VV5o9NXhkmEQDgBo8wPrKg2A"
 			]
 		},
 		"contracts/tokenespera.sol": {

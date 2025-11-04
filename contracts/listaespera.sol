@@ -14,18 +14,15 @@ contract ListaEspera {
     }
 
     function inscribirse() external noReentrancy {
-        require(msg.sender != owner, "El propietario no puede estar en la lista");
         require(!yaEstaInscrito(msg.sender), "Ya estas inscrito");
-
+        require(token.balanceOf(msg.sender) > 10**18, "Saldo insuficiente");
 
         inscritos.push(msg.sender);
 
-        token.transfer(owner, 1);
+        token.transfer(owner, 10**18);
     }
 
     function yaEstaInscrito(address _usuario) public view returns (bool) {
-        require(_usuario != owner, "El propietario no puede estar en la lista");
-
         for(uint256 i = 0; i < inscritos.length; i++) {
             if (inscritos[i] == _usuario) {
                 return true;
@@ -35,9 +32,7 @@ contract ListaEspera {
         return false;
     }
 
-    function numeroEnLista(address _usuario) public view returns (bool, uint256) {
-        require(_usuario != owner, "El propietario no puede estar en la lista");
-        
+    function numeroEnLista(address _usuario) public view returns (uint256) {     
         uint256 indice = 0;
         bool encontrado = false;
         for(uint256 i = 0; (i < inscritos.length) && (!encontrado); i++) {
@@ -48,7 +43,11 @@ contract ListaEspera {
             }
         }
 
-        return (encontrado, indice);
+        if (!encontrado) {
+            return 0;
+        } else {
+            return indice + 1;
+        }
     }
 
    function comprarToken() external {
