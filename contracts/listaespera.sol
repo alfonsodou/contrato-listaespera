@@ -65,6 +65,10 @@ contract ListaEspera {
         return true;
     }
 
+    function getBalance() view external returns (uint256) {
+        return token.balanceOf(msg.sender);
+    }
+
     // Modificador para prevenir ataques de reentrada
     modifier noReentrancy() {
         if (bloqueado) revert();

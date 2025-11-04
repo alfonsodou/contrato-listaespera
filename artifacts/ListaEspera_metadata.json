@@ -25,6 +25,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "getBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "inscribirse",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -216,19 +229,19 @@
 			]
 		},
 		"contracts/listaespera.sol": {
-			"keccak256": "0x1c70c9906d679a2bd00d2ce5dfec95b516792cb81ef58f37843edba91ae1e77b",
+			"keccak256": "0x7c4077ca85604896a9207185679516b55f2f91cc8d0721669203c45c63e4411f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3767ca5c47f6dc56637fa3ba19d49d542bd66bf64e1375973a64adad15225cf0",
-				"dweb:/ipfs/QmYMg6LGm73MonFLAdR8fidqqWmT4zTaRxkf3oC6Z8CaDH"
+				"bzz-raw://c0d9a9f88190ed53332a0c6edec6ff5ffa02122c6aff57e316c31826aff90428",
+				"dweb:/ipfs/QmPNDgtynXSySUs514u26DPK52rEsWRG4ZbJxmVwapgvv6"
 			]
 		},
 		"contracts/tokenespera.sol": {
-			"keccak256": "0xe77de716d0dfdea154d7ca61c28193691233a8acbaee6c3f4fcc71b21c4b8d66",
+			"keccak256": "0x4086973c73bf903115bccf34969ab8ebbdf945d18bff345b9279943388b7ac2f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3e9abd779a6233db56151759c95423be0ac77db1c4a0faffe8e70079078339cc",
-				"dweb:/ipfs/QmRTuRdQoeH9g9ehGFe5wfJVmCF1zBo8PgEGX6zg1Z7KdD"
+				"bzz-raw://29874284de9e65ebcf316cd8a569aad8ac523a5c656aff86a3162d4d16fea3ce",
+				"dweb:/ipfs/QmQkJW19HDW8GJCiyVGZXxGKSw3cHR1KNby6DaarNbLBVE"
 			]
 		}
 	},
