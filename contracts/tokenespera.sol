@@ -20,12 +20,18 @@ contract TokenEspera is ERC20 {
 
     function transfer(address to, uint256 amount) public override returns (bool) {
         require(msg.sender == owner, "Solo el propietario puede transferir");
-        return super.transfer(to, amount);
+        
+        _transfer(msg.sender, to, amount);
+
+        return true;
     }
 
      function transferFrom(address from, address to, uint256 amount) public override returns (bool) {
         require(msg.sender == owner, "Solo el propietario puede transferir");
-        return super.transferFrom(from, to, amount);
+
+        _transfer(from, to, amount);
+        
+        return true;
     }
 
     function mint(address to,  uint256 amount) external {

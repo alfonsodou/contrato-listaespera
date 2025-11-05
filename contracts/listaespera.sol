@@ -8,18 +8,20 @@ contract ListaEspera {
     TokenEspera public  token;
     address[]   public  inscritos;
     bool        private bloqueado; // Semáforo para funciones críticas
+    uint256     public constant COST_REGISTER = 10**18;    
 
     constructor(TokenEspera token_) {
         token = token_;
     }
 
-    function inscribirse() external noReentrancy {
+    function inscribirse() external {
         require(!yaEstaInscrito(msg.sender), "Ya estas inscrito");
-        require(token.balanceOf(msg.sender) > 10**18, "Saldo insuficiente");
+        require(token.balanceOf(msg.sender) > COST_REGISTER, "Saldo insuficiente");
 
         inscritos.push(msg.sender);
 
-        token.transfer(owner, 10**18);
+        bool result = token.transferFrom(msg.sender, owner, COST_REGISTER);
+        require(result, "Error al realizar la transferencia");
     }
 
     function yaEstaInscrito(address _usuario) public view returns (bool) {
@@ -32,11 +34,11 @@ contract ListaEspera {
         return false;
     }
 
-    function numeroEnLista(address _usuario) public view returns (uint256) {     
+    function numeroEnLista() public view returns (uint256) {     
         uint256 indice = 0;
         bool encontrado = false;
         for(uint256 i = 0; (i < inscritos.length) && (!encontrado); i++) {
-            if (inscritos[i] == _usuario) {
+            if (inscritos[i] == msg.sender) {
                 indice = i;
                 encontrado = true;
                 break;
@@ -62,6 +64,10 @@ contract ListaEspera {
         token.transferFrom(from, to, amount);
 
         return true;
+    }
+
+    function retirarUsuario() external {
+        
     }
 
     function getBalance() view external returns (uint256) {

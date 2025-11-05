@@ -18,6 +18,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "COST_REGISTER",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "comprarToken",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -63,13 +76,7 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "_usuario",
-						"type": "address"
-					}
-				],
+				"inputs": [],
 				"name": "numeroEnLista",
 				"outputs": [
 					{
@@ -224,19 +231,19 @@
 			]
 		},
 		"contracts/listaespera.sol": {
-			"keccak256": "0x708136d8e6fa5681158ba3b90c464c53ab6274abd66a1820694a5992f518d47a",
+			"keccak256": "0xfc24d44f953a0634e9d300ee48fd1b52fcfd3f810851fc14709c4f587b1d091b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://192b86eaf6b5b808bc303f0919351e27b5478c8e1f16fd30e529c34d4db1627d",
-				"dweb:/ipfs/QmTbVrRmQybpoXMdpgPGp3VV5o9NXhkmEQDgBo8wPrKg2A"
+				"bzz-raw://5bbb3dcd8120ce0950e91c4eaa66f6202f749eee439ca243f3113fb046768290",
+				"dweb:/ipfs/QmUobsoF1pRDMZU92VHzSQhhSx9rmCQaiUpFBfAAWXakjw"
 			]
 		},
 		"contracts/tokenespera.sol": {
-			"keccak256": "0x4086973c73bf903115bccf34969ab8ebbdf945d18bff345b9279943388b7ac2f",
+			"keccak256": "0xa8f4b66e4a3ae48318e5d47a8586ffedc4341063285c864c02bf7a5725e19642",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://29874284de9e65ebcf316cd8a569aad8ac523a5c656aff86a3162d4d16fea3ce",
-				"dweb:/ipfs/QmQkJW19HDW8GJCiyVGZXxGKSw3cHR1KNby6DaarNbLBVE"
+				"bzz-raw://cb55acd450dd078c63d9352d5fa78cce4fbd41358a6a905a8cac5502ec4c10de",
+				"dweb:/ipfs/QmV244QddGKugz7xZCtbk6aKjusHnfZuzqd2TWJKCTEf64"
 			]
 		}
 	},
